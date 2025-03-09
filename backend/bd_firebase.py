@@ -3,16 +3,8 @@ from firebase_admin import credentials, db, auth
 import json
 import os
 from dotenv import load_dotenv
-import streamlit as st
 
 load_dotenv()
-
-cred_data = st.secrets["FIREBASE_CREDENTIALS"]
-
-if not cred_data:
-    raise ValueError("Credenciais do Firebase não encontradas!")
-
-cred_json = json.loads(cred_data)
 
 class FirebaseApp:
     """
@@ -20,10 +12,13 @@ class FirebaseApp:
     Permite carregar, enviar, recuperar e excluir dados.
     """
     
-    def __init__(self):
+    def __init__(self, cred_data):
         """
         Inicializa a conexão com o Firebase usando credenciais armazenadas em variáveis de ambiente.
         """
+        self.cred_data = cred_data
+
+        cred_json = json.loads(self.cred_data)
         
         cred_file = os.getenv('FIREBASE_CREDENTIALS')
         db_url = os.getenv('FIREBASE_DATABASE_URL')
