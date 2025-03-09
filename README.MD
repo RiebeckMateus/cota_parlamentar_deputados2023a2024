@@ -1,0 +1,14 @@
+<h1 align='center'>Projeto de despesas de deputados</h1>
+
+<p align='center'>Projeto para portilfólio para utilização do Streamlit para amostragem de dados</p>
+<p align='center'>A fonte dos dados utilizados vieram do site <b>camara.leg.br</b></p>
+
+<p>Foram utilizadas as seguintes bibliotecas:</p>
+
+<li>Streamlit</li>
+<li>Pandas</li>
+<li>Plotly</li>
+<li>Babel</li>
+<li>Firebase_admin</li>
+
+<p>*Ainda preciso melhorar o README, mas como o projeto é pra amostragem, acredito que no momento é isso. Caso tenham alguma dúvida, pode entrar em contato comigo.</p>

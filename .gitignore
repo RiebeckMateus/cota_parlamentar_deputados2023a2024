@@ -1,0 +1,10 @@
+backend/cred_firebase.json
+backend/__pycache__/
+checagem.ipynb
+jup.ipynb
+jupdash.ipynb
+backend/__init__.py
+data/
+dep_data/
+scraping/
+venv/
