@@ -18,6 +18,9 @@ class FirebaseApp:
         """
         self.cred_data = cred_data
 
+        if isinstance(self.cred_data, str):
+            self.cred_data = json.loads(self.cred_data)
+
         cred_json = json.loads(self.cred_data)
         
         cred_file = os.getenv('FIREBASE_CREDENTIALS')
@@ -26,7 +29,7 @@ class FirebaseApp:
         if not firebase_admin._apps:
             cred = credentials.Certificate(cred_json)
             firebase_admin.initialize_app(cred, {
-                'databaseURL': st.secrets["FIREBASE_DATABASE_URL"]
+                'databaseURL': cred_json['FIREBASE_DATABASE_URL']
             })
         
         self.ref = db.reference('projeto_deputados')
