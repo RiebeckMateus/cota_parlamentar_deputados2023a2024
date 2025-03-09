@@ -6,6 +6,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+cred_data = st.secrets["FIREBASE_CREDENTIALS"]
+
+if not cred_data:
+    raise ValueError("Credenciais do Firebase não encontradas!")
+
+cred_json = json.loads(cred_data)
+
 class FirebaseApp:
     """
     Classe para gerenciar a interação com o Firebase Realtime Database.
@@ -21,9 +28,9 @@ class FirebaseApp:
         db_url = os.getenv('FIREBASE_DATABASE_URL')
         
         if not firebase_admin._apps:
-            cred = credentials.Certificate(cred_file)
+            cred = credentials.Certificate(cred_json)
             firebase_admin.initialize_app(cred, {
-                'databaseURL': db_url
+                'databaseURL': st.secrets["FIREBASE_DATABASE_URL"]
             })
         
         self.ref = db.reference('projeto_deputados')
