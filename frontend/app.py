@@ -42,7 +42,7 @@ ESTADOS_BRASIL = {
 
 class UI:
     def __init__(self):
-        self.processar = ProcessadorDados()
+        self.processar = ProcessadorDados(st.secrets["FIREBASE_CREDENTIALS"])
     
     def parametros_id_deputados(self):
         dep_params = st.query_params.get('id_deputado')
