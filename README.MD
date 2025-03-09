@@ -10,5 +10,5 @@
 <li>Plotly</li>
 <li>Babel</li>
 <li>Firebase_admin</li>
-
+<br>
 <p>*Ainda preciso melhorar o README, mas como o projeto é pra amostragem, acredito que no momento é isso. Caso tenham alguma dúvida, pode entrar em contato comigo.</p>
