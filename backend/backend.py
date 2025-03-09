@@ -7,8 +7,8 @@ from backend.bd_firebase import FirebaseApp
 # from bd_firebase import FirebaseApp
 
 class ProcessadorDados:
-    def __init__(self):
-        self.firebase = FirebaseApp()
+    def __init__(self, cred_data):
+        self.firebase = FirebaseApp(cred_data)
     
     # def retornar_df_resumo_por_estado(self):
     #     '''Retorna os dados do Firebase como um DataFrame já tratado'''
