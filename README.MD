@@ -3,6 +3,8 @@
 <p align='center'>Projeto para portilfólio para utilização do Streamlit para amostragem de dados</p>
 <p align='center'>A fonte dos dados utilizados vieram do site <b>camara.leg.br</b></p>
 
+<a href="https://cotaparlamentardeputados2023a2024.streamlit.app/">Link para a página em funcionamento</a>
+
 <p>Foram utilizadas as seguintes bibliotecas:</p>
 
 <li>Streamlit</li>
