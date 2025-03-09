@@ -18,10 +18,7 @@ class FirebaseApp:
         """
         self.cred_data = cred_data
 
-        if isinstance(self.cred_data, str):
-            self.cred_data = json.loads(self.cred_data)
-
-        cred_json = json.loads(self.cred_data)
+        cred_json = self.cred_data
         
         cred_file = os.getenv('FIREBASE_CREDENTIALS')
         db_url = os.getenv('FIREBASE_DATABASE_URL')
