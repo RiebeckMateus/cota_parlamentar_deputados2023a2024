@@ -29,7 +29,7 @@ class FirebaseApp:
         if not firebase_admin._apps:
             cred = credentials.Certificate(cred_json)
             firebase_admin.initialize_app(cred, {
-                'databaseURL': cred_json['FIREBASE_DATABASE_URL']
+                'databaseURL': 'https://testezin-a804e-default-rtdb.firebaseio.com/'
             })
         
         self.ref = db.reference('projeto_deputados')
